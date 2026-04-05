@@ -23,6 +23,7 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.budgetly.R
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
@@ -176,14 +177,14 @@ class GraphsFragment : Fragment() {
             val row = layoutInflater.inflate(
                 com.budgetly.R.layout.item_category_legend, binding.llCategoryLegend, false
             )
-            row.findViewById<View>(R.id.viewLegendColor).setBackgroundColor(
+            row.findViewById<View>(R.id.view_legend_color).setBackgroundColor(
                 Color.parseColor(summary.category.colorHex)
             )
-            row.findViewById<android.widget.TextView>(R.id.tvLegendName).text =
+            row.findViewById<android.widget.TextView>(R.id.tv_legend_name).text =
                 "${summary.category.icon} ${summary.category.displayName}"
-            row.findViewById<android.widget.TextView>(R.id.tvLegendAmount).text =
+            row.findViewById<android.widget.TextView>(R.id.tv_legend_amount).text =
                 "₹${String.format(",.0f", summary.totalAmount)}"
-            row.findViewById<android.widget.TextView>(R.id.tvLegendPercent).text =
+            row.findViewById<android.widget.TextView>(R.id.tv_legend_percent).text =
                 "${String.format("%.1f", summary.percentage)}%"
             binding.llCategoryLegend.addView(row)
         }

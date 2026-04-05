@@ -116,13 +116,13 @@ class BillsFragment : Fragment() {
         val sheetView = layoutInflater.inflate(R.layout.bottom_sheet_add_bill, null)
         dialog.setContentView(sheetView)
 
-        val etTitle = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etBillTitle)
-        val etAmount = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etBillAmount)
-        val btnDueDate = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnPickDueDate)
-        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerBillCategory)
-        val spinnerRecurrence = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerRecurrence)
-        val spinnerReminder = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerReminderDays)
-        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSaveBill)
+        val etTitle = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_bill_title)
+        val etAmount = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_bill_amount)
+        val btnDueDate = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_pick_due_date)
+        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_bill_category)
+        val spinnerRecurrence = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_recurrence)
+        val spinnerReminder = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_reminder_days)
+        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_save_bill)
 
         var selectedDate = existingBill?.dueDate ?: run {
             Calendar.getInstance().apply { add(Calendar.DAY_OF_MONTH, 7) }.time

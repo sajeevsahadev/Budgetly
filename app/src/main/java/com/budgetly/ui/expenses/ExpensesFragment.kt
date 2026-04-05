@@ -179,14 +179,14 @@ class ExpensesFragment : Fragment() {
         val sheetView = layoutInflater.inflate(R.layout.bottom_sheet_add_expense, null)
         dialog.setContentView(sheetView)
 
-        val etAmount = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etAmount)
-        val etDescription = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etDescription)
-        val etNotes = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etNotes)
-        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerCategory)
-        val spinnerPaymentMode = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerPaymentMode)
-        val switchCash = sheetView.findViewById<com.google.android.material.switchmaterial.SwitchMaterial>(R.id.switchCash)
-        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSave)
-        val btnCancel = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnCancel)
+        val etAmount = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_amount)
+        val etDescription = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_description)
+        val etNotes = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_notes)
+        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_category)
+        val spinnerPaymentMode = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_payment_mode)
+        val switchCash = sheetView.findViewById<com.google.android.material.switchmaterial.SwitchMaterial>(R.id.switch_cash)
+        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_save)
+        val btnCancel = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_cancel)
 
         // Setup spinners
         val categoryAdapter = ArrayAdapter(

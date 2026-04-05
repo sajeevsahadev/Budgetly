@@ -123,7 +123,6 @@ class ExpenseAdapter(
         val expense = getItem(position)
         with(holder.binding) {
             tvMerchant.text = expense.merchantName.ifBlank { expense.description }
-            tvDescription.text = expense.description
             tvAmount.text = if (expense.transactionType == TransactionType.CREDIT)
                 "+ ${currencyFormat.format(expense.amount)}"
             else

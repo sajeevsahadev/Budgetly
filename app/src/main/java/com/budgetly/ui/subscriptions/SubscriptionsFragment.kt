@@ -267,13 +267,13 @@ class SubscriptionsFragment : Fragment() {
         val sheetView = layoutInflater.inflate(R.layout.bottom_sheet_add_subscription, null)
         dialog.setContentView(sheetView)
 
-        val etName = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etSubName)
-        val etAmount = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etSubAmount)
-        val btnNextDate = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnPickNextDate)
-        val spinnerCycle = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerBillingCycle)
-        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerSubCategory)
-        val spinnerPayment = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerSubPayment)
-        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSaveSub)
+        val etName = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_sub_name)
+        val etAmount = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_sub_amount)
+        val btnNextDate = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_pick_next_date)
+        val spinnerCycle = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_billing_cycle)
+        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_sub_category)
+        val spinnerPayment = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_sub_payment)
+        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_save_sub)
 
         var selectedDate = existing?.nextBillingDate ?: Calendar.getInstance().apply {
             add(Calendar.MONTH, 1)

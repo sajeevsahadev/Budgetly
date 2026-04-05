@@ -220,11 +220,11 @@ class BudgetFragment : Fragment() {
         val sheetView = layoutInflater.inflate(R.layout.bottom_sheet_set_budget, null)
         dialog.setContentView(sheetView)
 
-        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinnerBudgetCategory)
-        val etLimit = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etBudgetLimit)
-        val sliderThreshold = sheetView.findViewById<com.google.android.material.slider.Slider>(R.id.sliderThreshold)
-        val tvThreshold = sheetView.findViewById<android.widget.TextView>(R.id.tvThresholdValue)
-        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSaveBudget)
+        val spinnerCategory = sheetView.findViewById<android.widget.Spinner>(R.id.spinner_budget_category)
+        val etLimit = sheetView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.et_budget_limit)
+        val sliderThreshold = sheetView.findViewById<com.google.android.material.slider.Slider>(R.id.slider_threshold)
+        val tvThreshold = sheetView.findViewById<android.widget.TextView>(R.id.tv_threshold_value)
+        val btnSave = sheetView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_save_budget)
 
         val categories = ExpenseCategory.values().filter { it != ExpenseCategory.SALARY }
         spinnerCategory.adapter = ArrayAdapter(requireContext(),
