@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- bottom_sheet_add_bill.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="20dp" android:background="@color/surface">
+    <View android:layout_width="40dp" android:layout_height="4dp"
+        android:layout_gravity="center_horizontal" android:background="@drawable/bg_bottom_sheet_handle"
+        android:layout_marginBottom="16dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Add Bill Reminder" android:textSize="20sp" android:textStyle="bold"
+        android:textColor="@color/text_primary" android:layout_marginBottom="16dp"/>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Bill Name"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_marginBottom="12dp">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_bill_title"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Amount (₹)"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_marginBottom="12dp">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_bill_amount"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btn_pick_due_date"
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:text="Pick Due Date" android:layout_marginBottom="12dp"
+        style="@style/Widget.Material3.Button.OutlinedButton" app:strokeColor="@color/primary"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Category" android:textSize="12sp" android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp"/>
+    <Spinner android:id="@+id/spinner_bill_category" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@drawable/bg_spinner" android:layout_marginBottom="12dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Recurrence" android:textSize="12sp" android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp"/>
+    <Spinner android:id="@+id/spinner_recurrence" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@drawable/bg_spinner" android:layout_marginBottom="12dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Remind me" android:textSize="12sp" android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp"/>
+    <Spinner android:id="@+id/spinner_reminder_days" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@drawable/bg_spinner" android:layout_marginBottom="20dp"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btn_save_bill"
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:text="Save Bill Reminder" app:backgroundTint="@color/primary"/>
+</LinearLayout>

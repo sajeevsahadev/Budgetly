@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Settings &amp; Privacy" android:textColor="@color/white"
+                android:textSize="22sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Stats card -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_margin="16dp"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/surface">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Your Data" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_stats_count" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="0 transactions tracked"
+                    android:textSize="14sp" android:textColor="@color/text_secondary"/>
+                <TextView android:id="@+id/tv_stats_total" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="₹0 total expenses"
+                    android:textSize="14sp" android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Privacy & Security section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="PRIVACY &amp; SECURITY" android:textSize="11sp"
+            android:textColor="@color/text_tertiary" android:letterSpacing="0.1"
+            android:paddingStart="20dp" android:paddingBottom="8dp"/>
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/surface">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Biometric lock -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp"
+                    android:paddingTop="16dp" android:paddingBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🔒 App Lock" android:textSize="15sp"
+                            android:textColor="@color/text_primary"/>
+                        <TextView android:id="@+id/tv_app_lock_subtitle"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Require biometric to open app"
+                            android:textSize="12sp" android:textColor="@color/text_secondary"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_app_lock"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="@color/background" android:layout_marginStart="16dp"/>
+
+                <!-- On-device data info -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📱" android:textSize="20sp" android:layout_marginEnd="12dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="On-Device Storage Only\nYour financial data never leaves this device. No cloud sync, no analytics, no ads."
+                        android:textSize="13sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Data management section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="DATA MANAGEMENT" android:textSize="11sp"
+            android:textColor="@color/text_tertiary" android:letterSpacing="0.1"
+            android:paddingStart="20dp" android:paddingBottom="8dp"/>
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/surface">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Export -->
+                <LinearLayout android:id="@+id/row_export" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:orientation="horizontal"
+                    android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+                    android:background="?attr/selectableItemBackground">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📤" android:textSize="20sp" android:layout_marginEnd="16dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Export Data as CSV"
+                        android:textSize="15sp" android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="›" android:textSize="20sp" android:textColor="@color/text_tertiary"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="@color/background" android:layout_marginStart="52dp"/>
+
+                <!-- Re-scan SMS -->
+                <LinearLayout android:id="@+id/row_rescan_sms" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:orientation="horizontal"
+                    android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+                    android:background="?attr/selectableItemBackground">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📩" android:textSize="20sp" android:layout_marginEnd="16dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Re-scan Bank SMS" android:textSize="15sp"
+                            android:textColor="@color/text_primary"/>
+                        <ProgressBar android:id="@+id/progress_rescan"
+                            android:layout_width="wrap_content" android:layout_height="16dp"
+                            android:visibility="gone" style="?android:attr/progressBarStyleHorizontal"
+                            android:indeterminate="true"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="›" android:textSize="20sp" android:textColor="@color/text_tertiary"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="@color/background" android:layout_marginStart="52dp"/>
+
+                <!-- Delete all -->
+                <LinearLayout android:id="@+id/row_delete_all" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:orientation="horizontal"
+                    android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+                    android:background="?attr/selectableItemBackground">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🗑️" android:textSize="20sp" android:layout_marginEnd="16dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Delete All Data"
+                        android:textSize="15sp" android:textColor="@color/red_500"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="›" android:textSize="20sp" android:textColor="@color/text_tertiary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- About -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Budgetly v1.0.0\nMade with ❤️ — Your finances, your privacy"
+            android:textSize="12sp" android:textColor="@color/text_tertiary"
+            android:gravity="center" android:padding="20dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="80dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

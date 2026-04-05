@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ExpenseTracker" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#7986CB</item>
+        <item name="colorPrimaryDark">#5C6BC0</item>
+        <item name="colorPrimaryVariant">#9FA8DA</item>
+        <item name="colorSecondary">#4DD0E1</item>
+        <item name="colorSurface">#1E1E2E</item>
+        <item name="android:colorBackground">#121220</item>
+        <item name="android:statusBarColor">#3949AB</item>
+        <item name="android:navigationBarColor">#1E1E2E</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+</resources>

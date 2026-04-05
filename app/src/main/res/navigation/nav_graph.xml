@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <!-- Dashboard -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.budgetly.ui.dashboard.DashboardFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_dashboard">
+        <action android:id="@+id/action_dashboard_to_addExpense"
+            app:destination="@id/addExpenseFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"/>
+        <action android:id="@+id/action_dashboard_to_expense_detail"
+            app:destination="@id/expenseDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="expenseId" app:argType="long"/>
+        </action>
+    </fragment>
+
+    <!-- Expenses List -->
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.budgetly.ui.expenses.ExpensesFragment"
+        android:label="Expenses"
+        tools:layout="@layout/fragment_expenses">
+        <action android:id="@+id/action_expenses_to_detail"
+            app:destination="@id/expenseDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="expenseId" app:argType="long"/>
+        </action>
+    </fragment>
+
+    <!-- Expense Detail -->
+    <fragment
+        android:id="@+id/expenseDetailFragment"
+        android:name="com.budgetly.ui.expenses.ExpenseDetailFragment"
+        android:label="Expense Detail"
+        tools:layout="@layout/fragment_expense_detail">
+        <argument android:name="expenseId" app:argType="long"/>
+    </fragment>
+
+    <!-- Graphs / Analytics -->
+    <fragment
+        android:id="@+id/graphsFragment"
+        android:name="com.budgetly.ui.graphs.GraphsFragment"
+        android:label="Insights"
+        tools:layout="@layout/fragment_graphs"/>
+
+    <!-- Bills -->
+    <fragment
+        android:id="@+id/billsFragment"
+        android:name="com.budgetly.ui.bills.BillsFragment"
+        android:label="Bills"
+        tools:layout="@layout/fragment_bills"/>
+
+    <!-- More / Settings hub -->
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.budgetly.ui.more.MoreFragment"
+        android:label="More"
+        tools:layout="@layout/fragment_more">
+        <action android:id="@+id/action_more_to_subscriptions"
+            app:destination="@id/subscriptionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action android:id="@+id/action_more_to_budget"
+            app:destination="@id/budgetFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action android:id="@+id/action_more_to_settings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Subscriptions -->
+    <fragment
+        android:id="@+id/subscriptionsFragment"
+        android:name="com.budgetly.ui.subscriptions.SubscriptionsFragment"
+        android:label="Subscriptions"
+        tools:layout="@layout/fragment_subscriptions"/>
+
+    <!-- Budget -->
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.budgetly.ui.budget.BudgetFragment"
+        android:label="Budget"
+        tools:layout="@layout/fragment_budget"/>
+
+    <!-- Settings -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.budgetly.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
+
+</navigation>

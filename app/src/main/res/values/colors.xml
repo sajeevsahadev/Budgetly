@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="primary">#5C6BC0</color>
+    <color name="primary_dark">#3949AB</color>
+    <color name="primary_light">#7986CB</color>
+    <color name="secondary">#26C6DA</color>
+    <color name="accent">#FF7043</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#F4F5F9</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F0F0F8</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_tertiary">#9CA3AF</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Semantic -->
+    <color name="green_500">#4CAF50</color>
+    <color name="red_500">#F44336</color>
+    <color name="amber_600">#FFB300</color>
+    <color name="blue_400">#42A5F5</color>
+    <color name="purple_400">#AB47BC</color>
+    <color name="teal_400">#26A69A</color>
+
+    <!-- Gradient stops -->
+    <color name="gradient_start">#5C6BC0</color>
+    <color name="gradient_end">#3949AB</color>
+
+    <!-- Bottom nav -->
+    <color name="bottom_nav_selected">#5C6BC0</color>
+    <color name="bottom_nav_unselected">#9CA3AF</color>
+</resources>
