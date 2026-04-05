@@ -1,0 +1,2 @@
+rootProject.name = "Budgetly"
+include ':app'
