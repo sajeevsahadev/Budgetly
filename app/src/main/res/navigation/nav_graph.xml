@@ -25,6 +25,13 @@
         </action>
     </fragment>
 
+    <!-- Add Expense (bottom sheet dialog) -->
+    <dialog
+        android:id="@+id/addExpenseFragment"
+        android:name="com.budgetly.ui.expenses.AddExpenseFragment"
+        android:label="Add Expense"
+        tools:layout="@layout/bottom_sheet_add_expense"/>
+
     <!-- Expenses List -->
     <fragment
         android:id="@+id/expensesFragment"
